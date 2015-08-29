@@ -1,7 +1,3 @@
-/*
- * driver assumes self-powered hardware, and
- * has no way for users to trigger remote wakeup.
- */
 
 #define VERBOSE_DEBUG
 #define DEBUG
@@ -100,8 +96,8 @@ module_param(config_default, int, S_IRUGO|S_IWUSR);
 #define DRIVER_VENDOR_NUM	0x0525		/* NetChip */
 #define DRIVER_PRODUCT_NUM	0xa4a0		/* Linux-USB "Gadget Zero" */
 
-#define DRIVER_VENDOR_NUM_EVERTZ       0x0836
-#define DRIVER_PRODUCT_NUM_EVERTZ      0xfefe       
+#define DRIVER_VENDOR_NUM       0x0836
+#define DRIVER_PRODUCT_NUM      0xfefe       
 
 
 #define DEFAULT_AUTORESUME      0
@@ -329,8 +325,8 @@ static int __init zero_bind(struct usb_composite_dev *cdev)
 	DBG(cdev, "config_default=%d\n",config_default);
 	switch (config_default){
 		case 0:
-                        device_desc.idVendor = __constant_cpu_to_le16(DRIVER_VENDOR_NUM_EVERTZ);
-                        device_desc.idProduct = __constant_cpu_to_le16(DRIVER_PRODUCT_NUM_EVERTZ);	
+                        device_desc.idVendor = __constant_cpu_to_le16(DRIVER_VENDOR_NUM);
+                        device_desc.idProduct = __constant_cpu_to_le16(DRIVER_PRODUCT_NUM);	
 			status = usb_add_config(cdev, &config_driver, do_config);
 			if (status < 0) return status;
 			//sourcesink_add(cdev, autoresume != 0);

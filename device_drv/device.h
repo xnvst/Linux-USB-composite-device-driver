@@ -1,15 +1,4 @@
-/*-------------------------------------------------------------------------*/
-/* Copyright 2007 Evertz Microsystems Ltd. All rights reserved             */
-/*-------------------------------------------------------------------------*/
-/**
- * @file
- * @brief USB command/status device
- *
- * $Id: device.h,v 1.5.8.2 2010-09-15 22:33:52 kjarrah Exp $
- *
- * This file defines the structure that is used by the USB command/status device
- * to maintain internal data.
- */
+
 #ifndef DEVICE_H
 #define DEVICE_H
 

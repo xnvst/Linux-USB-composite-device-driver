@@ -1,15 +1,4 @@
-/*-------------------------------------------------------------------------*/
-/* Copyright 2007 Evertz Microsystems Ltd. All rights reserved             */
-/*-------------------------------------------------------------------------*/
-/**
- * @file
- * @brief USB functions supported by the command/status protocol.
- *
- * $Id: cmd_stat.h,v 1.2.8.2 2010-09-15 22:33:52 kjarrah Exp $
- *
- * This file contains functions used by the command/status protocol to access
- * USB.
- */
+
 #ifndef CMD_STAT_H
 #define CMD_STAT_H
 
